@@ -18,6 +18,8 @@ def get_git_data():
 
   data_sources = []
   for commit_data in commits_data:
+    print("lol test debug: ")
+    print(commit_hash)
     commit_hash = commit_data["sha"]
     file_url = file_url_template.format(commit=commit_hash)
     file_path = downloads_path / f"{commit_hash}.json"
